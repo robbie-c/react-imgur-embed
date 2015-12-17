@@ -1,8 +1,8 @@
 {
   "name": "react-imgur-embed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React element for imgur embeds",
-  "main": "src/reactImgurEmbed.js",
+  "main": "src/ImgurEmbed.js",
   "scripts": {
     "test": "mocha"
   },
