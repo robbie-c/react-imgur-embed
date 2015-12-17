@@ -19075,19 +19075,22 @@ module.exports = validateDOMNesting;
 module.exports = require('./lib/React');
 
 },{"./lib/React":52}],158:[function(require,module,exports){
-"use strict";
-
 var React = require('react');
 
 var ImgurEmbed = React.createClass({
-  displayName: "ImgurEmbed",
 
   propTypes: {
     id: React.PropTypes.string.isRequired
   },
 
-  render: function render() {
-    return React.createElement("blockquote", { className: "imgur-embed-pub", lang: "en", "data-id": this.props.id });
+  render: function () {
+    return React.DOM.div({},
+      React.createElement('blockquote', {
+        className: 'imgur-embed-pub',
+        lang: 'en',
+        'data-id': this.props.id
+      })
+    );
   }
 
 });

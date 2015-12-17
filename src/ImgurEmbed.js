@@ -7,9 +7,13 @@ var ImgurEmbed = React.createClass({
   },
 
   render: function () {
-    return (
-        <blockquote className="imgur-embed-pub" lang="en" data-id={this.props.id}/>
-      )
+    return React.DOM.div({},
+      React.createElement('blockquote', {
+        className: 'imgur-embed-pub',
+        lang: 'en',
+        'data-id': this.props.id
+      })
+    );
   }
 
 });

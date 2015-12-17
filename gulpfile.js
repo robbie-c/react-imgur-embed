@@ -1,6 +1,5 @@
 'use strict';
 
-var babelify = require('babelify');
 var browserify = require('browserify');
 var gulp = require('gulp');
 var source = require('vinyl-source-stream');
@@ -13,8 +12,7 @@ var merge = require('merge-stream');
 var browserifyConfig = {
   entries: './src/ImgurEmbed.js',
   debug: true,
-  standalone: 'ImgurEmbed',
-  transform: [[babelify, { "presets": ["es2015", "react"] }]]
+  standalone: 'ImgurEmbed'
 };
 
 gulp.task('uglified', function () {
