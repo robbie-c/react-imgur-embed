@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImgurEmbed Tests</title>
+
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+</head>
+<body>
+
+<div id="mocha"></div>
+
+<!-- Test Framework -->
+<script src="../node_modules/expect.js/index.js"></script>
+<script src="../node_modules/mocha/mocha.js"></script>
+
+<!-- Dependencies -->
+<script src="../node_modules/react/dist/react.js"></script>
+
+<!-- Code Under Test -->
+<script src="../dist/js/ImgurEmbed.js"></script>
+
+<script>mocha.setup('bdd')</script>
+<script src="tests.js"></script>
+<script>
+    mocha.checkLeaks();
+    mocha.globals(['ImgurEmbed', 'React']);
+    mocha.run();
+</script>
+
+<div id="test-staging1"></div>
+<div id="test-staging2"></div>
+
+</body>
+</html>
