@@ -1,5 +1,7 @@
 var React = require('react');
 
+var globalImgurEmbedScriptTagId = "globalImgurEmbedScriptTag";
+
 var ImgurEmbed = React.createClass({
 
   propTypes: {
@@ -14,6 +16,16 @@ var ImgurEmbed = React.createClass({
         'data-id': this.props.id
       })
     );
+  },
+
+  componentDidMount: function () {
+    var newScriptTag = document.createElement('script');
+    newScriptTag.id = globalImgurEmbedScriptTagId;
+    newScriptTag.src = "//s.imgur.com/min/embed.js";
+    newScriptTag.type = "text/javascript";
+    newScriptTag.async = true;
+
+    document.querySelector('body').appendChild(newScriptTag);
   }
 
 });
